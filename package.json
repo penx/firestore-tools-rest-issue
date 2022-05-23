@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "firebase emulators:start --import=localdata --export-on-exit",
+    "test": "curl -v GET \"http://localhost:8080/emulator/v1/projects/my-project/databases/(default)/documents\""
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/penx/firestore-tools-rest-issue/issues"
   },
-  "homepage": "https://github.com/penx/firestore-tools-rest-issue#readme"
+  "homepage": "https://github.com/penx/firestore-tools-rest-issue#readme",
+  "dependencies": {
+    "firebase-tools": "^11.0.0"
+  }
 }
